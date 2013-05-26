@@ -3,7 +3,6 @@ var stylus = require("stylus");
 var nib = require("nib");
 
 
-
 var app = express()
 function compile(str, path){
 	return stylus(str)
@@ -20,11 +19,18 @@ app.use(stylus.middleware(
 	, 	compile: compile
 }))
 
+app.get('/', function (req, res) {
+  res.render("index",{ title: "home"} )
+})
+app.get('/apa',function(req, res){
+	res.render("apa", {title: "apa"})
+})
+app.post('/apa', function(req,res){
+	console.log("PostarPosten!")
+})
+
 app.use(express.static(__dirname +"/public"))
 
-app.get('/', function (req, res) {
-  res.render("index",{ title: "home"} 
-)}
-)
+
 
 app.listen(3000);
