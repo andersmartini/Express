@@ -1,29 +1,37 @@
 extend layout
+include ../Jquery.js
+include ../script.js
 
 header
+	
 	h3
 		Apa
 
 
 block content
-	p
-		apor är fina djur som gillar att hänga i svansen
-		apor är fina djur som gillar att hänga i svansen
-		apor är fina djur som gillar att hänga i svansen
-		apor är fina djur som gillar att hänga i svansen
+	p#JS
+		apor är fina djur 
+		som gillar att hänga i svansen
+		apor är fina djur som 
+		gillar att hänga i svansen
+		apor är fina djur som gillar
+		att hänga i svansen
+		apor är fina 
+		djur som gillar att hänga i svansen
 
-	p
-		Hundar är fina djur som gillar att vifta på svansen
-		Hundar är fina djur som gillar att vifta på svansen
-		Hundar är fina djur som gillar att vifta på svansen
-		Hundar är fina djur som gillar att vifta på svansen
-		Hundar är fina djur som gillar att vifta på svansen
-		Hundar är fina djur som gillar att vifta på svansen
+	p 	Hundar är fina djur som gillar att vifta på svansen
 
-	div
-		input(type="text" name ="post")
-		
-
+		|Hundar är fina djur som gillar att vifta på svansen
+		|Hundar är fina djur som gillar att vifta på svansen
+		|Hundar är fina djur som gillar att vifta på svansen
+		|Hundar är fina djur som gillar att vifta på svansen
+		|Hundar är fina djur som gillar att vifta på svansen
+		Monkies = Math.floor(Math.random()*10)
+		case Monkies
+			when 0: p there are no monkeys!
+			when 1: p There is One Monkey! His name is Apa
+			default: p There are #{Monkies} Monkies in your tribe! You're not the leader...
+	div#red
 
 .sidebar
 	block sidebar
@@ -33,7 +41,7 @@ block content
 				h1 ApWidget
 					
 				p
-					undrar om den funkar....
+					|undrar om den funkar....
 
 
 		.widget
@@ -42,4 +50,14 @@ block content
 
 			p
 				En vanlig side widget, denna borde ju funka kan man tycka!
+
+
+block menu
+	div
+		ul
+			li	
+				<a href="/"> start</a>
+			
+			li	<a href="/apa">Apa</a>
+
 
