@@ -1,15 +1,23 @@
 !!!5
 html
   head
+  block head
     title #{title} - My Site
     link(rel='stylesheet', href='/stylesheets/style.css')
+    <script type="text/javascript"src="/Jquery.js"></script>
+    <script type="text/javascript"src="/script.js"></script>
+
   body
     header
       h1 My Site
+
+    .menu
+      block menu
     .container
       .main-content
         block content
       .sidebar
         block sidebar
+
     footer
       p Running on node with Express, Jade and Stylus
