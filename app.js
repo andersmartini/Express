@@ -19,7 +19,7 @@ app.use(stylus.middleware(
 	src:__dirname + "/public"
 	, 	compile: compile
 }))
-app.set('view options', { locals: { scripts: ['./Jquery.js', './script.js'] }}); 
+ 
 console.log("allaaahhh!")
 app.get('/', function (req, res) {
   res.render("index",{ title: "home"} )
@@ -29,12 +29,6 @@ app.get('/apa',function(req, res){
 })
 app.get('/favicon.ico',function(req, res){
 	res.send("./favicon.ico", {title: "codeWave"})
-})
-app.get('/Jquery.js', function(req,res){
-	res.send("./Jquery.js");
-})
-app.get('/script.js', function(req,res){
-	res.send("./script.js")
 })
 
 app.use(express.static(__dirname +"/public"))
